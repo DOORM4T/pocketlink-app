@@ -7,6 +7,7 @@ import {
 
 export default function ButtonWithIcon({
   onPress,
+  onLongPress,
   children,
   color = "#2699FB",
   style,
@@ -19,6 +20,7 @@ export default function ButtonWithIcon({
         ...style,
       }}
       onPress={onPress}
+      onLongPress={onLongPress}
     >
       {children}
     </TouchableOpacity>
@@ -26,8 +28,9 @@ export default function ButtonWithIcon({
 }
 
 type props = {
-  onPress: (event: GestureResponderEvent) => void | Function;
-  children: React.ReactNode;
+  onPress?: (event: GestureResponderEvent) => void | Function;
+  onLongPress?: (event: GestureResponderEvent) => void | Function;
+  children?: React.ReactNode;
   color?: string;
   style?: Object;
 };
