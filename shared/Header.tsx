@@ -1,11 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { StackNavigationProp } from "react-navigation-stack/lib/typescript/src/vendor/types";
-import {
-  NavigationRoute,
-  NavigationParams,
-  ThemeColors,
-} from "react-navigation";
+import { NavigationRoute, NavigationParams } from "react-navigation";
 import { SimpleLineIcons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
@@ -31,6 +27,7 @@ const styles = StyleSheet.create({
     color: "#2699FB",
     fontWeight: "bold",
     fontSize: 18,
+    fontFamily: "OpenSans-Bold",
   },
 });
 
