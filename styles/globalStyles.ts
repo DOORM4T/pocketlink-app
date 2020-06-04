@@ -14,11 +14,18 @@ export default StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 5,
     marginVertical: 12,
+    fontFamily: "OpenSans-Regular",
   },
   switch: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingHorizontal: 25,
+    paddingHorizontal: 5,
+    padding: 10,
+    elevation: 0.5,
+  },
+  text: {
+    fontSize: 16,
+    fontFamily: "OpenSans-Regular",
   },
 });
