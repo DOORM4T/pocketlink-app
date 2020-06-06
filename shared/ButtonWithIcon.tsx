@@ -28,7 +28,7 @@ export default function ButtonWithIcon({
 }
 
 type props = {
-  onPress?: (event: GestureResponderEvent) => void | Function;
+  onPress?: Function;
   onLongPress?: (event: GestureResponderEvent) => void | Function;
   children?: React.ReactNode;
   color?: string;

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
 import HomeStack from "./routes/HomeStack";
-// import { linksDB } from "./firebaseApp";
+console.disableYellowBox = true;
 
 const getFonts = () =>
   Font.loadAsync({
@@ -13,12 +13,6 @@ const getFonts = () =>
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = useState(false);
-
-  // useEffect(() => {
-  //   linksDB.get().then((snapshot) => {
-  //     snapshot.docs.forEach((doc) => console.log(doc.data()));
-  //   });
-  // });
 
   if (fontsLoaded) return <HomeStack />;
   else
