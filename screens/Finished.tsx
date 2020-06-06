@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -7,13 +7,17 @@ import {
   Platform,
   Clipboard,
   TextInput,
+  ActivityIndicator,
 } from "react-native";
 import { NavigationStackProp } from "react-navigation-stack";
 import globalStyles from "../styles/globalStyles";
 import ButtonWithIcon from "../shared/ButtonWithIcon";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
 import QRCode from "react-native-qrcode-svg";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { NavigationActions } from "react-navigation";
+import { functions, linksDB } from "../firebaseApp";
 
 export default function Finished({ navigation }: FinishedProps) {
   const shortenedURL = "pocketurl.link/" + navigation.getParam("shortenedURL");
@@ -97,6 +101,22 @@ export default function Finished({ navigation }: FinishedProps) {
           ...and a QR Code for good measure
         </Text>
       </View>
+      <ButtonWithIcon
+        onPress={() => {
+          navigation.reset(
+            [NavigationActions.navigate({ routeName: "Home" })],
+            0,
+          );
+        }}
+        style={{
+          position: "absolute",
+          bottom: 5,
+          width: "100%",
+          alignSelf: "center",
+        }}
+      >
+        <MaterialIcons name="add-circle-outline" size={30} color="#fff" />
+      </ButtonWithIcon>
     </View>
   );
 }
