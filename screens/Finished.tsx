@@ -17,7 +17,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import QRCode from "react-native-qrcode-svg";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { NavigationActions } from "react-navigation";
-import { functions, linksDB } from "../firebaseApp";
+// import { functions, linksDB } from "../firebaseApp";
 
 export default function Finished({ navigation }: FinishedProps) {
   const shortenedURL = "pocketurl.link/" + navigation.getParam("shortenedURL");
